@@ -34,7 +34,7 @@ struct MetObject: Codable, Identifiable {
     var classification, rightsAndReproduction, linkResource, metadataDate: String
     var repository: String
     var objectURL: String
-    var tags: [Tag]
+    var tags: [Tag]?
     var objectWikidataURL: String
     var isTimelineWork: Bool
     var galleryNumber: String

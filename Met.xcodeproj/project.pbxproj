@@ -16,6 +16,9 @@
 		03A25614268678A200730250 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A25613268678A200730250 /* Preview Assets.xcassets */; };
 		03A2561E268678A200730250 /* MetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2561D268678A200730250 /* MetTests.swift */; };
 		03A25628268678A200730250 /* MetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A25627268678A200730250 /* MetUITests.swift */; };
+		03C671642690D0A0000FB22C /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 03C671632690D0A0000FB22C /* OrderedCollections */; };
+		03C671662690E18B000FB22C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C671652690E18B000FB22C /* DetailView.swift */; };
+		03C6716826922D9A000FB22C /* Sequence+asyncUnorderedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C6716726922D9A000FB22C /* Sequence+asyncUnorderedMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		03A25623268678A200730250 /* MetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A25627268678A200730250 /* MetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetUITests.swift; sourceTree = "<group>"; };
 		03A256342686795E00730250 /* Met.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Met.entitlements; sourceTree = "<group>"; };
+		03C671652690E18B000FB22C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		03C6716726922D9A000FB22C /* Sequence+asyncUnorderedMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+asyncUnorderedMap.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C671642690D0A0000FB22C /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,8 @@
 				03A256342686795E00730250 /* Met.entitlements */,
 				03A2560C268678A100730250 /* MetApp.swift */,
 				03A2560E268678A100730250 /* SearchView.swift */,
+				03C6716726922D9A000FB22C /* Sequence+asyncUnorderedMap.swift */,
+				03C671652690E18B000FB22C /* DetailView.swift */,
 				039E633C268795B10051EA09 /* MetSearchService.swift */,
 				039E63382687820F0051EA09 /* SearchResult.swift */,
 				039E633A2687821A0051EA09 /* MetObject.swift */,
@@ -151,6 +159,9 @@
 			dependencies = (
 			);
 			name = Met;
+			packageProductDependencies = (
+				03C671632690D0A0000FB22C /* OrderedCollections */,
+			);
 			productName = Met;
 			productReference = 03A25609268678A000730250 /* Met.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 03A25600268678A000730250;
+			packageReferences = (
+				03C671622690D0A0000FB22C /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 03A2560A268678A000730250 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C6716826922D9A000FB22C /* Sequence+asyncUnorderedMap.swift in Sources */,
 				03A2560F268678A100730250 /* SearchView.swift in Sources */,
+				03C671662690E18B000FB22C /* DetailView.swift in Sources */,
 				039E63392687820F0051EA09 /* SearchResult.swift in Sources */,
 				03A2560D268678A100730250 /* MetApp.swift in Sources */,
 				039E633D268795B10051EA09 /* MetSearchService.swift in Sources */,
@@ -623,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03C671622690D0A0000FB22C /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03C671632690D0A0000FB22C /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03C671622690D0A0000FB22C /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03A25601268678A000730250 /* Project object */;
 }
